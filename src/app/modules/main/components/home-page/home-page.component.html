@@ -1,0 +1,7 @@
+<main class="home">
+  <div *ngFor="let section of sections" class="home_content" [routerLink]="section.link" [ngClass]="section.class">
+    <div class="home_title_block">
+      <p class="home_title">{{ section.title }}</p>
+    </div>
+  </div>
+</main>

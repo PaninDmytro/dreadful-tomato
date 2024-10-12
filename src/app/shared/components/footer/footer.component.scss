@@ -1,0 +1,59 @@
+:host {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+
+    &_logo {
+      background: url('../../../../assets/images/logo.png') center no-repeat;
+      height: 60px;
+      width: 274px;
+      margin-inline: auto;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    &_nav {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+
+     &_block {
+       margin-bottom: 20px;
+     }
+
+      &_item {
+        cursor: pointer;
+      }
+    }
+
+    &_stores {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      margin-bottom: 20px;
+
+      &_app {
+        background: url('../../../../assets/images/app-store.png') center no-repeat;
+      }
+
+      &_google {
+        background: url('../../../../assets/images/google-play.png') center no-repeat;
+      }
+    }
+
+    &_store {
+      height: 40px;
+      width: 130px;
+    }
+
+    &_license {
+      font-weight: 400;
+      font-size: 12px;
+      color: darkgray;
+    }
+  }
+}

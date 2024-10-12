@@ -1,0 +1,150 @@
+:host {
+  .header {
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    &_categories {
+      display: flex;
+      align-items: center;
+    }
+
+    &_category {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 20px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: red;
+      }
+
+      &_filters {
+        padding: 20px 15px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: rgba(30, 30, 30, 0.8);
+        }
+
+        &-active {
+          background-color: rgba(30, 30, 30, 0.8);
+          border-bottom: 5px solid red;
+          padding-bottom: 15px;
+        }
+      }
+
+      &_title {
+        font-size: 20px;
+        font-weight: 400;
+        transition: color 0.3s ease;
+      }
+
+      &_icon {
+        height: 31px;
+        width: 33px;
+        margin-right: 10px;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &_movies_icon {
+      background: url('../../../../assets/images/icon-movies.png') center no-repeat;
+    }
+
+    &_series_icon {
+      background: url('../../../../assets/images/icon-series.png') center no-repeat;
+    }
+
+    &_filters_icon {
+      background: url('../../../../assets/images/icon-filter.png') center no-repeat;
+    }
+
+    &_logo {
+      background: url('../../../../assets/images/logo.png') center no-repeat;
+      height: 60px;
+      width: 274px;
+      margin-right: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    &_login_trial_filters {
+      display: flex;
+      align-items: center;
+      height: 60px;
+    }
+
+    &_login {
+      font-size: 20px;
+      font-weight: 400;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+
+      &_icon {
+        background: url('../../../../assets/images/icon-login.png') center no-repeat;
+        height: 20px;
+        width: 25px;
+      }
+
+      &_block {
+        display: flex;
+        align-items: center;
+        border-inline: 1px solid white;
+        padding: 15px 15px;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    }
+
+    &_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      background-color: red;
+      border: none;
+      height: 30px;
+      width: 170px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: darkred;
+        color: #f0f0f0;
+      }
+    }
+  }
+
+  .active {
+    background-color: red;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.filters {
+  background-color: red;
+  padding-block: 10px;
+
+  &_input {
+    flex: 0 0 82%;
+    max-width: 82%;
+    margin-right: 20px
+  }
+}
+
+.filters_wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}

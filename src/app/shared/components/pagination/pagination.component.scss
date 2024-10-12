@@ -1,0 +1,60 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  &_button {
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background-color: darkred;
+
+    &.active {
+      font-weight: 600;
+      background-color: red;
+    }
+
+    &:hover:not(.active) {
+      color: #c00;
+    }
+
+    &.arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      color: #a00;
+      border-radius: 0;
+
+      &:hover {
+        color: #c00;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background-size: contain;
+  border: none;
+
+  &-right {
+    background: url('../../../../assets/images/right-arrow.png') center no-repeat;
+  }
+
+  &-left {
+    background: url('../../../../assets/images/left-arrow.png') center no-repeat;
+  }
+}

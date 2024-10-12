@@ -1,0 +1,66 @@
+<header class="header">
+  <div class="header_wrapper">
+    <div class="header_categories">
+      <div [routerLink]="['/']" class="header_logo"></div>
+
+      <div
+        *ngIf="isMoviesOrSeriesPage"
+        class="header_category"
+        [routerLink]="['/main/movies']"
+        [class.active]="pageType === 'movies'"
+      >
+        <div class="header_category_icon header_movies_icon"></div>
+        <p class="header_category_title">Movies</p>
+      </div>
+
+      <div
+        *ngIf="isMoviesOrSeriesPage"
+        class="header_category"
+        [routerLink]="['/main/series']"
+        [class.active]="pageType === 'series'"
+      >
+        <div class="header_category_icon header_series_icon"></div>
+        <p class="header_category_title">Series</p>
+      </div>
+    </div>
+
+    <div class="header_login_trial_filters">
+      <div
+        *ngIf="isMoviesOrSeriesPage"
+        class="header_category header_category_filters"
+        [class.header_category_filters-active]="isFilterActive"
+        (click)="focusOnFilter()"
+      >
+        <div class="header_category_icon header_filters_icon"></div>
+        <p class="header_category_title">Filters</p>
+      </div>
+
+      <div class="header_login_block">
+        <p class="header_login">Login</p>
+        <div class="header_login_icon"></div>
+      </div>
+
+      <button class="header_button">
+        Start your free trial
+      </button>
+    </div>
+  </div>
+
+  <div class="filters" *ngIf="isMoviesOrSeriesPage">
+    <div class="filters_wrapper" [formGroup]="movieForm">
+      <app-input
+        class="filters_input"
+        placeholder="Name"
+        formControlName="search"
+        (onFocusEmitter)="focusOnFilter()"
+        (onBlurEmitter)="ofFilter()"
+        [isFilterActive]="isFilterActive"
+      >
+      </app-input>
+
+      <app-date
+        formControlName="year"
+      ></app-date>
+    </div>
+  </div>
+</header>

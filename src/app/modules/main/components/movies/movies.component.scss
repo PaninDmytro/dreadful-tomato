@@ -1,0 +1,78 @@
+@import "../../../../../assets/styles/mixin";
+
+:host {
+  .movies {
+    background-color: rgba(20, 20, 20, 0.6);
+
+    &_title {
+      max-width: 1200px;
+      margin: auto;
+      font-size: 20px;
+    }
+
+    &_block {
+      @include contentGrid;
+      width: 100%;
+      max-width: 1200px;
+      margin-inline: auto;
+      margin-top: 10px;
+      min-height: 600px;
+    }
+
+    &_card {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      width: 230px;
+      height: 100%;
+      max-height: 320px;
+      object-fit: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+
+      &:hover .movies_card_description_content {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &:hover .movies_card_description {
+        max-height: 150px;
+        height: 100%;
+      }
+
+      &_description {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+
+        &_title {
+          font-size: 17px;
+        }
+
+        &_content {
+          position: absolute;
+          bottom: 15px;
+          left: 15px;
+          right: 15px;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        &_year_text {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 1.2;
+          max-height: 3.6rem;
+        }
+      }
+    }
+  }
+}

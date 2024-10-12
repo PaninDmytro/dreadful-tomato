@@ -1,0 +1,13 @@
+<div class="p-fluid p-grid p-formgrid">
+  <div class="p-field p-col-12 p-md-4">
+    <p-calendar
+      view="year"
+      dateFormat="yy"
+      [(ngModel)]="value"
+      (ngModelChange)="onDateChange($event)"
+      [readonlyInput]="false"
+      inputId="pickYear"
+      placeholder="1920-1988">
+    </p-calendar>
+  </div>
+</div>

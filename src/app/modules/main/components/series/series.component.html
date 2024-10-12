@@ -1,0 +1,30 @@
+<div class="series" [@fadeInOutAnimation]="true">
+  <h1 class="series_title">Popular Series</h1>
+
+  <div
+    class="series_block"
+  >
+    <div
+      *ngFor="let seria of filteredSeries$ | async"
+      class="series_card"
+      [ngStyle]="{'background-image': 'url(' + seria.images.posterArt.url + ')'}"
+    >
+      <div class="series_card_description">
+        <h2 class="series_card_description_title">{{ seria.title }}</h2>
+
+        <div class="series_card_description_content">
+          <span class="series_card_description_year">{{ seria.releaseYear }}</span>
+
+          <p class="series_card_description_year_text">{{ seria.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-pagination
+    [pages]="pages"
+    [currentPage]="currentPage"
+    [visiblePages]="visiblePages"
+    (changePageEmitter)="changePage($event)"
+  ></app-pagination>
+</div>

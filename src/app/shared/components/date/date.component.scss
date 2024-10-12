@@ -1,0 +1,45 @@
+.p-fluid {
+  max-width: 300px;
+}
+
+::ng-deep .p-inputtext {
+  border-radius: 20px;
+  height: 30px;
+  padding: 10px;
+  border: transparent;
+  outline: none;
+}
+
+::ng-deep .p-yearpicker {
+  --columns: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(80px, auto));
+  background-color: white;
+  padding: 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+::ng-deep .p-datepicker {
+  background-color: red;
+  border-radius: 5px;
+}
+
+::ng-deep .p-datepicker-header {
+  justify-content: center;
+  height: 35px;
+}
+
+::ng-deep .p-yearpicker-year {
+  color: gray;
+  margin: auto;
+  padding: 10px;
+
+  &:hover {
+    background-color: darkred;
+  }
+}
+
+::ng-deep .p-link {
+  background-color: transparent;
+  border: none;
+}

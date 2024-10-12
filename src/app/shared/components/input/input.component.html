@@ -1,0 +1,17 @@
+<div
+  class="input-wrapper"
+  [class.input-focused]="focused"
+>
+  <mat-icon class="search-icon">search</mat-icon>
+
+  <input
+    class="input"
+    #inputElement
+    [type]="type"
+    [placeholder]="placeholder"
+    [value]="value"
+    (input)="onInputChange($event)"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+  >
+</div>

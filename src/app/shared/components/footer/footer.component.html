@@ -1,0 +1,16 @@
+<footer class="footer">
+  <div [routerLink]="['/']" class="footer_logo"></div>
+
+  <nav class="footer_nav_block">
+    <ul class="footer_nav">
+      <li class="footer_nav_item" *ngFor="let item of footerNav">{{ item }}</li>
+    </ul>
+  </nav>
+
+  <div class="footer_stores">
+    <div class="footer_store footer_stores_app"></div>
+    <div class="footer_store footer_stores_google"></div>
+  </div>
+
+  <p class="footer_license">Copyright 2020 Dreadfull Tomato Streaming All Rights Reserved</p>
+</footer>

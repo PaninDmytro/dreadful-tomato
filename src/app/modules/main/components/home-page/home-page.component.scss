@@ -1,0 +1,49 @@
+:host {
+  .home {
+    display: flex;
+    height: 73vh;
+    min-height: 73vh;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+
+    &_content {
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      width: 50%;
+      cursor: pointer;
+      position: relative;
+
+      &:hover .home_title_block {
+        background-color: rgba(255, 0, 0, 1);
+      }
+    }
+
+    &_movies {
+      background: url('../../../../../assets/images/movies.png') center no-repeat;
+      background-size: cover;
+    }
+
+    &_series {
+      background: url('../../../../../assets/images/series.png') center no-repeat;
+      background-size: cover;
+    }
+
+    &_title {
+      font-size: 33px;
+
+      &_block {
+        background-color: rgba(255, 0, 0, 0.7);
+        height: 80px;
+        padding: 25px 20px;
+        width: 100%;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: red;
+        }
+      }
+    }
+  }
+}

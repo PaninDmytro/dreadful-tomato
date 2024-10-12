@@ -1,0 +1,31 @@
+<div class="movies">
+  <h1 class="movies_title">Popular Series</h1>
+
+  <div
+    class="movies_block"
+    [@fadeInOutAnimation]="true"
+  >
+    <div
+      *ngFor="let movie of filteredMovies$ | async"
+      class="movies_card"
+      [ngStyle]="{'background-image': 'url(' + movie.images.posterArt.url + ')'}"
+    >
+      <div class="movies_card_description">
+        <h2 class="movies_card_description_title">{{ movie.title }}</h2>
+
+        <div class="movies_card_description_content">
+          <span class="movies_card_description_year">{{ movie.releaseYear }}</span>
+
+          <p class="movies_card_description_year_text">{{ movie.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-pagination
+    [pages]="pages"
+    [currentPage]="currentPage"
+    [visiblePages]="visiblePages"
+    (changePageEmitter)="changePage($event)"
+  ></app-pagination>
+</div>
